@@ -1,0 +1,1 @@
+# Striker - Gateway de Pagamento

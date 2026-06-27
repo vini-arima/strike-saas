@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="/gateway/frontend/css/style.css">
+</head>
+<body>
+
+    <h1>Novo Pagamento</h1>
+
+    <form>
+
+        <div>
+            <label for="customer">Cliente:</label>
+            <input
+                type="text"
+                id="customer"
+                name="customer"
+                placeholder="Nome do cliente"
+                required>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="amount">Valor:</label>
+            <input
+                type="number"
+                id="amount"
+                name="amount"
+                step="0.01"
+                placeholder="0.00"
+                required>
+        </div>
+
+        <br>
+
+        <div>
+            <p>Método de pagamento:</p>
+
+            <input
+                type="radio"
+                id="pix"
+                name="method"
+                value="PIX">
+
+            <label for="pix">PIX</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="creditCard"
+                name="method"
+                value="CREDIT_CARD">
+
+            <label for="creditCard">Cartão de Crédito</label>
+        </div>
+
+        <br>
+
+        <button type="submit">
+            Processar Pagamento
+        </button>
+
+    </form>
+
+    <br><br>
+    <a class="botao1" href="/gateway/frontend/index.html"> Voltar </a>
+
+</body>
+</html>
+

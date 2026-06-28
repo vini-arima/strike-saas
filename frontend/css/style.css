@@ -1,0 +1,36 @@
+header{
+    text-align:center;
+    padding:40px;
+}
+
+
+.card{
+
+background:rgb(255, 152, 48);
+
+padding:25px;
+
+margin:20px 0;
+
+border-radius:10px;
+
+text-align:center;
+
+box-shadow:0 0 10px rgba(4, 4, 4, 0.588);
+
+}
+
+.botao1{
+    background:rgb(0, 0, 0);
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+} 
+
+.botao1:hover{
+    background:rgb(118, 118, 118);
+    color:black;
+}
+

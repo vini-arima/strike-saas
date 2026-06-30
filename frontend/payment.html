@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <h1>Novo Pagamento</h1>
+    <h1 class="title">Novo Pagamento</h1>
 
-    <form>
+    <form class="form">
 
         <div>
             <label for="customer">Cliente:</label>
@@ -33,6 +33,7 @@
                 step="0.01"
                 placeholder="0.00"
                 required>
+
         </div>
 
         <br>
@@ -40,7 +41,7 @@
         <div>
             <p>Método de pagamento:</p>
 
-            <input
+            <input 
                 type="radio"
                 id="pix"
                 name="method"
@@ -61,14 +62,16 @@
 
         <br>
 
-        <button type="submit">
+        <button class="enviar" type="submit">
             Processar Pagamento
         </button>
 
     </form>
 
     <br><br>
-    <a class="botao1" href="/gateway/frontend/index.html"> Voltar </a>
+    <div class="container-link">
+         <a class="botao2" href="/gateway/frontend/index.html"> Voltar </a>
+    </div>
 
 </body>
 </html>

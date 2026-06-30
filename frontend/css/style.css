@@ -39,7 +39,7 @@ box-shadow:0 0 10px rgba(4, 4, 4, 0.588);
 }
 
 /*
-    CSS estilo do customer e payment  
+    CSS estilo do customer 
 */
 
 .form{
@@ -88,3 +88,18 @@ box-shadow:0 0 10px rgba(4, 4, 4, 0.588);
     opacity:0.8;
 }
 
+/*
+    CSS estilo do consultar
+    
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px ;
+}
+
+th,
+td {
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}

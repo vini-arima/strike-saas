@@ -2,15 +2,14 @@
 const form = document.querySelector(".form");
 
 form.addEventListener("submit", function(event) {
-
-    if (validarSenha() && validarNome() && validaEmail()) {
-        console.log("Cadastro enviado");
-        form.reset();
+    event.preventDefault();
+    if (validarSenha() && validarNome() && validarEmail()) {
+        return ;
     } 
     
     console.log("Cadastro realizado!");
+    form.reset();
 
-    event.preventDefault();
 });
 
 function validarNome(){
@@ -67,5 +66,19 @@ function validarSenha(){
 }
 
 function validarEmail(){
-   
+    const email = document.getElementById("email").value.trim();
+
+    if (email === "") {
+        alert("O e-mail é obrigatório.");
+        return false;
+    }
+
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regexEmail.test(email)) {
+        alert("Digite um e-mail válido.");
+        return false;
+    }
+
+    return true;
 }

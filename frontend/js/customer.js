@@ -14,6 +14,19 @@ form.addEventListener("submit", function(event) {
 });
 
 function validarNome(){
+    const nome = document.getElementById("nome").value ;
+
+    if(nome.length < 3){
+        alert("O nome deve ter pelo menos 3 caracteres.");
+        return false;
+    }
+
+    const regexNome = /^[A-Za-zÀ-ÿ\s]+$/;
+
+    if (!regexNome.test(nome)) {
+        alert("O nome deve conter apenas letras.");
+        return false;
+    }
 
 }
 
@@ -54,5 +67,5 @@ function validarSenha(){
 }
 
 function validarEmail(){
-
+   
 }

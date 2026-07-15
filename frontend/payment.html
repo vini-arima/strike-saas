@@ -12,31 +12,24 @@
 
     <form class="form">
 
-        <div>
-            <label for="customer">Cliente:</label>
-            <input
-                type="text"
-                id="customer"
-                name="customer"
-                placeholder="Nome do cliente"
-                required>
-        </div>
+        <label for="customer">Cliente:</label>
+        <select id ="cliente" name="cliente" required>
+                <option value="">Selecione clientes...</option>
+        </select>
 
-        <br>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
 
-        <div>
-            <label for="amount">Valor:</label>
-            <input
-                type="number"
-                id="amount"
-                name="amount"
-                step="0.01"
-                placeholder="0.00"
-                required>
-
-        </div>
-
-        <br>
+        <label for="amount">Valor:</label>
+        <input
+            type="number"
+            id="amount"
+            name="amount"
+            step="0.01"
+            placeholder="0.00"
+            required>
 
         <div>
             <p>Método de pagamento:</p>

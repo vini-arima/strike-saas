@@ -4,12 +4,9 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     if (validarNome() && validarEmail()) {
-        return ;
+        console.log("Cadastro realizado!");
+        form.reset();
     } 
-    
-    console.log("Cadastro realizado!");
-    form.reset();
-
 });
 
 function validarNome(){

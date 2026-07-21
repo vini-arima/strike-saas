@@ -7,3 +7,14 @@ form.addEventListener("submit", function(event) {
         form.reset();
     } 
 });
+
+function validarValor(){
+    const valor = parseFloat(document.getElementById("valor").value) ;
+
+    if(isNaN(valor) || valor <= 0 ){
+        alert("Valor não pode ser negativo. Selecione valores positivos") ;
+        return false ;
+    }
+    
+    return true ;
+}

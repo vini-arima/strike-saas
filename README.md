@@ -22,7 +22,7 @@ Banco de Dados: MySQL
 ### Não Funcionais
 
 - cadastro de cliente deve ser persistido em um banco de dados MySQL
-- cadastro de cliente deve validar CPF e e-mail.
+- cadastro de cliente deve validar e-mail.
 - processamento de pagamento deve aceitar apenas duas opções PIX ou Cartão.
 - sistema deve ser organizado em arquitetura em camadas.
 

@@ -1,7 +1,5 @@
 package com.project.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Customer {
         
@@ -13,7 +11,7 @@ public class Customer {
 
     }
 
-    public Customer(int id, String name, String email, List<Customer> customers) {
+    public Customer(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;

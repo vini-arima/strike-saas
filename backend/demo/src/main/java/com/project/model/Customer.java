@@ -9,9 +9,6 @@ public class Customer {
     private String name ;
     private String email ;
     
-    // Lista de Clientes para cada pagamento
-    private List<Customer> customers = new ArrayList<>() ;
-
     public Customer(){
 
     }
@@ -20,7 +17,7 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.customers = customers;
+
     }
 
     public int getId() {
@@ -42,18 +39,8 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public List<Customer> getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
-    } 
-
     
 
-    
 
 
     

@@ -1,6 +1,5 @@
 package com.project.service;
 
-
 import org.springframework.stereotype.Service;
 
 import com.project.model.Customer;
@@ -25,6 +24,10 @@ public class CustomerService {
         }
 
         repository.save(customer) ;
+    }
+
+    public Iterable<Customer> findAllCustomer(){
+        return repository.findAll() ;
     }
 
 

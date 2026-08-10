@@ -4,11 +4,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.http.HttpStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND) 
-public class CustomerNotFound extends RuntimeException {
-    
-    public CustomerNotFound(String mensage){
-         super(mensage) ;
+public class PaymentNotFound extends RuntimeException {
+    public PaymentNotFound(String mensage){
+        super(mensage) ;
     }
-
-
 }

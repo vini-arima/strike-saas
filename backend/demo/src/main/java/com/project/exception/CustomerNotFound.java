@@ -10,5 +10,7 @@ public class CustomerNotFound extends RuntimeException {
          super(mensage) ;
     }
 
-
+    public CustomerNotFound(){
+        super("Clinte não encontrado") ;       
+    }
 }

@@ -5,7 +5,12 @@ import org.springframework.http.HttpStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND) 
 public class PaymentNotFound extends RuntimeException {
+
     public PaymentNotFound(String mensage){
         super(mensage) ;
+    }
+
+    public PaymentNotFound(){
+        super("Pagamento não encontrado");
     }
 }

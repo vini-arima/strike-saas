@@ -18,16 +18,11 @@ public class CustomerService {
     }
 
     public Customer createCustomer(Customer customer){
-        try {
-            if(repository.findByEmail(customer.getEmail()).isPresent()){
+        if(repository.findByEmail(customer.getEmail()).isPresent()){
                 throw new IllegalArgumentException("Email já cadastrado") ;
-            }   
-        } catch (CustomerNotFound e) {
-                
-        }
-
-        repository.save(customer) ;
-        return customer ;
+        }   
+        
+        return repository.save(customer) ;
     }
 
     public Iterable<Customer> findAllCustomer(){

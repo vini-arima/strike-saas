@@ -4,9 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.project.exception.CustomerNotFound;
-import com.project.exception.PayementNotFound;
-import com.project.model.Customer;
+import com.project.exception.PaymentNotFound;
 import com.project.model.Payment;
 import com.project.repository.PaymentRepository;
 
@@ -20,14 +18,12 @@ public class PaymentService {
     }
     
     public Payment createPayment(Payment payment){
-        try {
-            
-        } catch (PayementNotFound e) {
-                
+        
+        if(repository.findByAmount(payment.getAmount()).isPresent()){
+                 throw new IllegalArgumentException("O Valor do produto tá cadastrado") ;
         }
-
-        repository.save(payment) ;
-        return payment ;
+        
+        return repository.save(payment) ;
     }
 
     public Iterable<Payment> findAllPayment(){
@@ -37,7 +33,7 @@ public class PaymentService {
     public Payment findPaymentById(Integer id){
         Optional<Payment> payment = repository.findById(id) ;
 
-        return payment.orElseThrow(CustomerNotFound::new) ;
+        return payment.orElseThrow(PaymentNotFound::new) ;
     }
 
     

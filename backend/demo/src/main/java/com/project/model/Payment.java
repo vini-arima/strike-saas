@@ -1,7 +1,12 @@
 package com.project.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("TB_PAYMENT")
 public class Payment {
 
+    @Id
     private int id ;
     private double amount ;
     private PaymentStatus status ;

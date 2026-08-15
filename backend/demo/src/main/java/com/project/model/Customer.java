@@ -1,8 +1,12 @@
 package com.project.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table("TB_CUSTOMERS")
 public class Customer {
-        
+    
+    @Id  
     private int id ;
     private String name ;
     private String email ;

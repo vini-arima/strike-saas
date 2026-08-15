@@ -2,6 +2,6 @@ package com.project.model;
 
 public enum PaymentStatus {
     PENDING , 
-    APROVED ,
+    APPROVED ,
     REFUSED ;
 }

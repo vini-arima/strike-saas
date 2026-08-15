@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.project.model.Customer;
 import com.project.model.Payment;
 
-public interface PaymentRepository extends CrudRepository<Payment, Long>{
+public interface PaymentRepository extends CrudRepository<Payment, Integer>{
 
      Optional <Customer> findByAmount(double amount); 
 

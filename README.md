@@ -52,4 +52,30 @@ gateway/
 └── README.md
 ```
 ## Backend 
-Futuramente irei implementar
+```
+gateway/
+└── backend/
+│    └── demo/
+│       ├── .mvn/
+│       ├── src/
+│       │   ├── main/
+│       │   │   ├── java/
+│       │   │   └── com/
+│       │   │   │       └── project/
+│       │   │   │           ├── controller/
+│       │   │   │           ├── demo/
+│       │   │   │           ├── dto/
+│       │   │   │           ├── exception/
+│       │   │   │           ├── model/
+│       │   │   │           ├── repository/
+│       │   │   │           └── service/
+│       │   │   └── resources/
+│       │   └── test/
+│       ├── .gitattributes
+│       ├── .gitignore
+│       ├── mvnw
+│       ├── mvnw.cmd
+│       ├── pom.xml
+├── LICENSE
+└── README.md
+```

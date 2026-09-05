@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="/gateway/frontend/css/style.css">
+</head>
+<body>
+
+    <h1 class="title">Novo Pagamento</h1>
+
+    <form class="form">
+
+        <label for="customer">Cliente:</label>
+        <select id ="cliente" name="cliente" required>
+                <option value="">Selecione clientes...</option>
+                <!-- Mock - Payment -->
+                <option value="1">João Silva</option>
+        </select>
+
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <label for="amount">Valor:</label>
+        <input
+            type="number"
+            id="amount"
+            name="amount"
+            step="0.01"
+            placeholder="0.00"
+            required>
+
+        <div>
+            <p>Método de pagamento:</p>
+
+            <input 
+                type="radio"
+                id="pix"
+                name="method"
+                value="PIX">
+
+            <label for="pix">PIX</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="creditCard"
+                name="method"
+                value="CREDIT_CARD">
+
+            <label for="creditCard">Cartão de Crédito</label>
+        </div>
+
+        <br>
+
+        <button class="enviar" type="submit">
+            Processar Pagamento
+        </button>
+
+    </form>
+
+    <br><br>
+    <div class="container-link">
+         <a class="botao2" href="/gateway/frontend/index.html"> Voltar </a>
+    </div>
+
+</body>
+</html>
+

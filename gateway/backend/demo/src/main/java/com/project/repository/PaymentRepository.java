@@ -2,16 +2,14 @@ package com.project.repository;
 
 import java.util.Optional;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
 import com.project.model.Customer;
 import com.project.model.Payment;
 
-public interface PaymentRepository extends CrudRepository<Payment, Integer>{
+public interface PaymentRepository extends ListCrudRepository<Payment, Integer>{
 
      Optional <Customer> findByAmount(double amount); 
-
-     Optional<Payment> findById(Integer id);
 
     
 } 

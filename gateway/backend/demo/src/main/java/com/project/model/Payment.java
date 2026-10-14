@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 public class Payment {
 
     @Id
-    private int id ;
+    private Integer id ;
     private double amount ;
     private PaymentStatus status ;
     private PaymentMethod method ;

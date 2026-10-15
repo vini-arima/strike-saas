@@ -1,9 +1,11 @@
 package com.project.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.project.dto.PaymentDTO;
 import com.project.exception.PaymentNotFound;
 import com.project.model.Payment;
 import com.project.repository.PaymentRepository;
@@ -17,27 +19,19 @@ public class PaymentService {
         this.repository = repository;
     }
     
-    public Payment createPayment(Payment payment){
-        
-        if(repository.findByAmount(payment.getAmount()).isPresent()){
-                 throw new IllegalArgumentException("O Valor do produto tá cadastrado") ;
-        }
-        
-        return repository.save(payment) ;
+    public PaymentDTO save(PaymentDTO dto){
+        Payment payment = dto.toModel() ; 
+
+        Payment saved = repository.save(payment) ;
+
+        return new PaymentDTO(saved) ;
+
     }
 
-    public Iterable<Payment> findAllPayment(){
-        return repository.findAll() ;
+
+    public List<PaymentDTO> findAllPayment(){
+        return repository.findAll().stream().map(PaymentDTO::new ).toList() ;
     } 
-
-    public Payment findPaymentById(Integer id){
-        Optional<Payment> payment = repository.findById(id) ;
-
-        return payment.orElseThrow(PaymentNotFound::new) ;
-    }
-
-    
-
 
 
 }

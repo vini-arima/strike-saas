@@ -1,10 +1,10 @@
 package com.project.service;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.project.exception.CustomerNotFound;
+import com.project.dto.CustomerDTO;
 import com.project.model.Customer;
 import com.project.repository.CustomerRepository;
 
@@ -17,24 +17,18 @@ public class CustomerService {
         this.repository = repository;
     }
 
-    public Customer createCustomer(Customer customer){
-        if(repository.findByEmail(customer.getEmail()).isPresent()){
-                throw new IllegalArgumentException("Email já cadastrado") ;
-        }   
-        
-        return repository.save(customer) ;
+    public CustomerDTO save(CustomerDTO  dto){
+        Customer customer = dto.toModel() ; 
+
+        Customer saved = repository.save(customer) ;
+
+        return new CustomerDTO(saved) ;
     }
 
-    public Iterable<Customer> findAllCustomer(){
-        return repository.findAll() ;
+    public List<CustomerDTO> findAllCustomer(){
+        return repository.findAll().stream().map(CustomerDTO::new).toList() ;
     } 
 
-    public Customer findCustomerByID(Integer id){
-        Optional<Customer> customer = repository.findById(id) ; 
-        
-        return customer.orElseThrow(CustomerNotFound::new) ;
-        
-    }
 }
 
 
